@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  background-image: url(pics/stars.jpg);
+  background-repeat: repeat;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+.navbar a:hover{
+    text-decoration: underline;
+}
+thead{
+    font-size: 4vh;
+}
+td{
+    font-size: 3vh;
+}
+img{
+    width: 20vw;
+    height: 25vh;
+    border-radius: 25px;
+}
+button{
+    font-size: 20px;
+    padding: 1vh;
+    border-radius: 25px;
+    border: 1px solid white;
+}
+button:hover{
+    background-color: #1A3850;
+    box-shadow: 5px 5px 15px rgba(123, 119, 119, 0.3);
+    color: white;
+}
+/* media qieuriweur here */
+@media (max-width: 724px) {
+   
+/* making usere small */
+#userTable {
+    display: block;
+    width: 100%;
+    color: white;
+  }
+  
+  tbody, thead, tr, td, th {
+    display: block;
+  }
+  
+  thead {
+    display: none; /* Hide the header row */
+  }
+  
+  tbody tr {
+    border: 1px solid rgba(255, 255, 255, 0.3);;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+  }
+  
+  tbody td {
+    font-size: 3vh;
+    text-align: left;
+    padding: 5px 0;
+  }
+  td{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+  
+  /* Add custom labels before each cell */
+  tbody td:nth-child(1)::before { content: "Username: "; font-weight: bold; }
+  tbody td:nth-child(2)::before { content: "Email: "; font-weight: bold; }
+  tbody td:nth-child(3)::before { content: "Password: "; font-weight: bold; }
+  tbody td:nth-child(4)::before { content: "Picture: "; font-weight: bold; }
+  tbody td:nth-child(5)::before { content: "Actions: "; font-weight: bold; }
+  
+  /* Adjust image size within the table */
+  img {
+    width:200px;
+    height: auto;
+    display: block;
+    margin-top: 5px;
+  }
+  
+}
+@media (max-width: 369px) {
+    img {
+        width:150px;
+      }
+      table, .navbar{
+        overflow: hidden;
+      }
+}

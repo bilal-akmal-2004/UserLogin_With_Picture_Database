@@ -95,7 +95,7 @@ button:hover{
         padding: 0px;
     }
 }   
-@media (max-width: 412px) {
+@media (max-width: 415px) {
     h1{
         font-size: 30px;
     }

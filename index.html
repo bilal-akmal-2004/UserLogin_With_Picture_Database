@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
   </head>
   <body>
     <div class="navbar">
       <a href="">Billo bhai</a>
-      <a href="" id="database-anchor">Database</a>
+      <a href="database.html" id="database-anchor">Database</a>
     </div>
     <div class="main-container">
       <div class="form-container">
         <h1>Profile Information</h1>
-        <form action="informationSubmit">
+        <form id="userForm">
           <input type="text" id="userName" placeholder="Username" required />
           <input type="email" id="email" placeholder="Email" required />
           <input
@@ -29,5 +28,6 @@
         </form>
       </div>
     </div>
+    <script src="script.mjs" type="module"></script>
   </body>
 </html>

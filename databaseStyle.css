@@ -100,6 +100,14 @@ button:hover{
   }
   
 }
+@media (max-width: 413px) {
+    .navbar h1{
+        font-size: 27px;
+      }
+      .navbar a {
+        margin-right: 10px;
+      }
+}
 @media (max-width: 369px) {
     img {
         width:150px;
@@ -107,4 +115,5 @@ button:hover{
       table, .navbar{
         overflow: hidden;
       }
+      
 }

@@ -49,14 +49,22 @@ async function displayUserData() {
         deleteButton.innerText = "Delete";
         // Add click event listener for the delete button
         deleteButton.addEventListener("click", async function () {
-          try {
-            // Remove user from the database
-            await remove(ref(db, "users/" + userData.username));
-            // Remove the row from the table
-            tableBody.removeChild(row);
-            alert("User deleted successfully!");
-          } catch (error) {
-            console.error("Error deleting user: ", error);
+          let makeSureToDelete = prompt(
+            "Are you sure you want to delete this data,yes or no !"
+          );
+          if (makeSureToDelete.toLowerCase() === "yes") {
+            try {
+              // Remove user from the database
+              await remove(ref(db, "users/" + userData.username));
+              // Remove the row from the table
+              tableBody.removeChild(row);
+              alert("User deleted successfully!");
+            } catch (error) {
+              console.error("Error deleting user: ", error);
+            }
+          } else {
+            alert("No user deleted!");
+            return;
           }
         });
 
